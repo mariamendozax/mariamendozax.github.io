@@ -181,12 +181,12 @@ contactForm.addEventListener("submit", async (e) => {
     });
 
     if (response.ok) {
-      formStatus.textContent = "¡Gracias! Tu mensaje fue enviado.";
+      formStatus.textContent = "Message received — I'll get back to you soon!";
       contactForm.reset();
     } else {
-      formStatus.textContent = "Hubo un problema, intenta de nuevo.";
+      formStatus.textContent = "Something went wrong. Please try again.";
     }
   } catch (error) {
-    formStatus.textContent = "Hubo un problema, intenta de nuevo.";
+    formStatus.textContent = "Something went wrong. Please try again.";
   }
 });
