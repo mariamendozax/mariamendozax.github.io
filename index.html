@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Maria Mendoza | Portafolio</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="shortcut icon" href="./favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Syne:wght@400..800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Syne:wght@400..800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="pages">
+      <header class="header">
+        <a class="nav__link nav__logo" href="#hero">María Mendoza</a>
+        <nav class="nav">
+          <ul class="nav__links">
+            <li><a class="nav__link" href="#about">About me</a></li>
+            <li><a class="nav__link" href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+      <section class="hero" id="hero">
+        <h1 class="title">María Mendoza</h1>
+        <p class="ocuppacion">Frontend Developer & Creative Coder</p>
+        <h2 class="text">
+          Where code meets canvas. Turning logic into beauty, one pixel at a
+          time.
+        </h2>
+        <div class="modal__btn">
+          <a class="btn btn__primary" href="#projects">Ver proyectos</a>
+        </div>
+      </section>
+      <section class="about" id="about">
+        <div class="container">
+          <div class="about__header">
+            <h3 class="title__container">About me</h3>
+          </div>
+          <div class="about__body">
+            <img
+              class="about__image"
+              src="./images/profile_image.jpeg"
+              alt="fotografia de la autora"
+            />
+            <div class="about__content">
+              <p class="about__text">
+                I'm a Frontend Developer with roots in arts and luxury
+                hospitality — a combination that taught me that details matter
+                and that technology, when done right, can be just as expressive
+                as any creative medium.
+              </p>
+              <p class="about__text">
+                I build responsive, accessible interfaces using HTML, CSS,
+                JavaScript (including OOP and API integration), where design and
+                code meet: visually intentional, intuitive, and built with real
+                users in mind.
+              </p>
+              <p class="about__text">
+                My background in high-demand, guest-focused environments shaped
+                my ability to work under pressure, meet exacting standards, and
+                adapt seamlessly to any team or context — skills I bring
+                directly into how I approach development.
+              </p>
+              <p class="about__text">
+                Currently expanding my stack into React and Node.js.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="cards__project" id="projects">
+        <h2 class="cards__title">Mis <span>proyectos</span></h2>
+        <ul class="cards__list"></ul>
+
+        <template id="card-template">
+          <li class="card">
+            <img class="card__image" src="" alt="" />
+            <div class="card__description">
+              <h3 class="card__title"></h3>
+              <p class="card__tags"></p>
+            </div>
+          </li>
+        </template>
+      </section>
+      <footer class="footer" id="contact">
+        <div class="container">
+          <h2 class="footer__title">Let's work together!</h2>
+          <p class="footer__text">
+            Have a project in mind or just want to say hi?
+          </p>
+          <form
+            class="footer__form"
+            action="https://formspree.io/f/xdarwjgb"
+            method="POST"
+          >
+            <input
+              type="text"
+              name="name"
+              placeholder="Your name"
+              class="footer__input"
+              required
+            />
+            <input
+              type="email"
+              name="email"
+              placeholder="Your email"
+              class="footer__input"
+              required
+            />
+            <textarea
+              name="message"
+              placeholder="Your message"
+              class="footer__textarea"
+              required
+            ></textarea>
+            <button type="submit" class="footer__btn">Send message</button>
+          </form>
+          <div class="footer__links">
+            <a
+              href="www.linkedin.com/in/maría-mendoza-bab41731b"
+              class="footer__link"
+              target="_blank"
+              >LinkedIn |</a
+            >
+            <a
+              href="https://github.com/mariamendozax"
+              class="footer__link"
+              target="_blank"
+              >GitHub</a
+            >
+          </div>
+
+          <p class="footer__copy">© 2026 María Mendoza</p>
+        </div>
+      </footer>
+    </div>
+    <script src="./index.js"></script>
+  </body>
+</html>
