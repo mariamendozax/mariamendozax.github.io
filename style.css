@@ -172,6 +172,73 @@
   font-size: 2rem;
 }
 
+/* Contenedor del grid */
+.cards__list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  list-style: none;
+  padding: 0;
+  margin-top: 2.5rem;
+}
+
+/* La card individual */
+.card {
+  background-image: url("./images/background.png");
+  border: 1px solid rgba(181, 160, 255, 0.2); /* lavanda tenue */
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  max-width: 400px;
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.card:hover,
+.card:focus-visible {
+  transform: translateY(-4px);
+  border-color: #4dd9c0; /* cian al hover */
+  box-shadow: 0 8px 24px rgba(77, 217, 192, 0.15);
+  outline: none;
+}
+
+/* Imagen de la card */
+.card__image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Contenedor de texto */
+.card__description {
+  padding: 1.25rem;
+}
+
+.card__title {
+  font-family: "Syne", sans-serif;
+  font-size: 1.1rem;
+  color: #b5a0ff; /* lavanda */
+  margin-bottom: 0.5rem;
+}
+
+.card__excerpt {
+  font-family: "Merriweather", serif;
+  font-size: 0.9rem;
+  color: #e4e4ec; /* casi blanco, buen contraste sobre navy */
+  line-height: 1.5;
+  margin-bottom: 0.75rem;
+}
+
+.card__tags {
+  font-family: "Merriweather", serif;
+  font-size: 0.75rem;
+  color: #e0c97f; /* dorado */
+  letter-spacing: 0.02em;
+}
+
 .footer__title {
   font-family: "Syne", sans-serif;
   background: radial-gradient(circle, #b5a0ff 0%, #4dd9c0 100%);
@@ -251,7 +318,6 @@
   color: #0d0d0d;
 }
 
-/* Links LinkedIn / GitHub */
 .footer__link {
   color: #b5a0ff;
   text-decoration: none;
@@ -269,4 +335,116 @@
   opacity: 0.7;
   font-size: 0.85rem;
   margin-top: 20px;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal_opened {
+  display: flex;
+}
+
+.modal__overlay {
+  position: absolute;
+  inset: 0;
+  background-image: url("./images/background.png");
+  backdrop-filter: blur(2px);
+}
+
+.modal__content {
+  position: relative;
+  background-image: url("./images/background.png");
+  border: 1px solid rgba(181, 160, 255, 0.25);
+  border-radius: 16px;
+  padding: 2rem;
+  max-width: 600px;
+  width: 90%;
+  max-height: 85vh;
+  overflow-y: auto;
+  z-index: 1;
+}
+
+.modal__close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  color: #b5a0ff;
+  font-size: 1.75rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.modal__close:hover,
+.modal__close:focus-visible {
+  color: #4dd9c0;
+}
+
+.modal__image {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 1.25rem;
+}
+
+.modal__title {
+  font-family: "Syne", sans-serif;
+  color: #b5a0ff;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.modal__tags {
+  font-family: "Merriweather", serif;
+  color: #e0c97f;
+  font-size: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.modal__description {
+  font-family: "Merriweather", serif;
+  color: #e4e4ec;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.modal__links {
+  display: flex;
+  gap: 1rem;
+}
+
+.modal__repo,
+.modal__demo {
+  font-family: "Syne", sans-serif;
+  color: #4dd9c0;
+  text-decoration: none;
+  border: 1px solid #4dd9c0;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.modal__repo:hover,
+.modal__demo:hover {
+  background-color: #4dd9c0;
+  color: #0d0d1a;
+}
+
+@media (max-width: 600px) {
+  .cards__list {
+    grid-template-columns: 1fr;
+  }
 }

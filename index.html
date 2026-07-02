@@ -85,6 +85,7 @@
             <img class="card__image" src="" alt="" />
             <div class="card__description">
               <h3 class="card__title"></h3>
+              <p class="card__excerpt"></p>
               <p class="card__tags"></p>
             </div>
           </li>
@@ -97,6 +98,7 @@
             Have a project in mind or just want to say hi?
           </p>
           <form
+            id="contact-form"
             class="footer__form"
             action="https://formspree.io/f/xdarwjgb"
             method="POST"
@@ -123,6 +125,7 @@
             ></textarea>
             <button type="submit" class="footer__btn">Send message</button>
           </form>
+          <p id="form-status"></p>
           <div class="footer__links">
             <a
               href="www.linkedin.com/in/maría-mendoza-bab41731b"
@@ -141,6 +144,33 @@
           <p class="footer__copy">© 2026 María Mendoza</p>
         </div>
       </footer>
+    </div>
+    <div class="modal" id="project-modal">
+      <div class="modal__overlay" data-close></div>
+      <div
+        class="modal__content"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modal-title"
+      >
+        <button
+          class="modal__close"
+          type="button"
+          aria-label="Cerrar"
+          data-close
+        >
+          &times;
+        </button>
+        <img class="modal__image" src="" alt="" />
+        <h3 class="modal__title" id="modal-title"></h3>
+        <p class="modal__tags"></p>
+        <p class="modal__description"></p>
+        <div class="modal__links">
+          <a class="modal__repo" href="#" target="_blank" rel="noopener"
+            >Ver repositorio</a
+          >
+        </div>
+      </div>
     </div>
     <script src="./index.js"></script>
   </body>
