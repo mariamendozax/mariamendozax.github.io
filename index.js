@@ -190,3 +190,26 @@ contactForm.addEventListener("submit", async (e) => {
     formStatus.textContent = "Something went wrong. Please try again.";
   }
 });
+
+// nav__toggle
+
+const navToggle = document.querySelector(".nav__toggle");
+const navLinks = document.querySelector(".nav__links");
+const navLinkItems = document.querySelectorAll(".nav__links .nav__link");
+const navLogo = document.querySelector(".nav__logo");
+
+function closeMenu() {
+  navLinks.classList.remove("is-open");
+  navToggle.setAttribute("aria-expanded", false);
+}
+
+navToggle.addEventListener("click", () => {
+  const isOpen = navLinks.classList.toggle("is-open");
+  navToggle.setAttribute("aria-expanded", isOpen);
+});
+
+navLinkItems.forEach((link) => {
+  link.addEventListener("click", closeMenu);
+});
+
+navLogo.addEventListener("click", closeMenu);
