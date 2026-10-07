@@ -35,6 +35,16 @@
   align-items: center;
 }
 
+.logo {
+width: 40px;
+}
+
+.logo:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+  opacity: 0.7;
+}
+
 .nav__links {
   list-style: none;
   display: flex;
@@ -467,6 +477,27 @@
 .modal__demo:hover {
   background-color: #4dd9c0;
   color: #0d0d1a;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
 }
 
 @media (max-width: 600px) {
