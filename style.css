@@ -537,6 +537,10 @@
     background-attachment: scroll;
   }
 
+  .title {
+    font-size: 43px;
+  }
+
   .cards__list {
     grid-template-columns: 1fr;
   }
@@ -568,7 +572,7 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-attachment: scroll;
     flex-direction: column;
     justify-content: center;
     align-items: center;
