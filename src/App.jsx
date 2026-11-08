@@ -186,11 +186,7 @@ function ProjectModal({ project, onClose }) {
       className={`modal${project ? " modal_opened" : ""}`}
       aria-hidden={!project}
     >
-      <div
-        className="modal__overlay"
-        aria-hidden="true"
-        onClick={onClose}
-      />
+      <div className="modal__overlay" aria-hidden="true" onClick={onClose} />
       <div
         className="modal__content"
         ref={modalRef}
@@ -218,15 +214,38 @@ function ProjectModal({ project, onClose }) {
             </h3>
             <p className="modal__tags">{project.tags}</p>
             <p className="modal__description">{project.description}</p>
+
             <div className="modal__links">
-              <a
-                className="modal__repo"
-                href={project.repoUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Ver proyecto
-              </a>
+              {project.repoUrl && (
+                <a
+                  className="modal__repo"
+                  href={project.repoUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Ver proyecto
+                </a>
+              )}
+              {project.liveUrl && (
+                <a
+                  className="modal__repo"
+                  href={project.liveUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Live site
+                </a>
+              )}
+              {project.videoUrl && (
+                <a
+                  className="modal__repo"
+                  href={project.videoUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Ver demo
+                </a>
+              )}
             </div>
           </>
         )}
@@ -243,11 +262,7 @@ function ProjectSection({ onOpen }) {
       </h2>
       <ul className="cards__list">
         {projects.map((project) => (
-          <ProjectCard
-            key={project.title}
-            project={project}
-            onOpen={onOpen}
-          />
+          <ProjectCard key={project.title} project={project} onOpen={onOpen} />
         ))}
       </ul>
     </section>
@@ -319,11 +334,7 @@ function ContactFooter() {
             className="footer__textarea"
             required
           ></textarea>
-          <button
-            type="submit"
-            className="footer__btn"
-            disabled={isSubmitting}
-          >
+          <button type="submit" className="footer__btn" disabled={isSubmitting}>
             {isSubmitting ? "Sending..." : "Send message"}
           </button>
         </form>
@@ -337,7 +348,7 @@ function ContactFooter() {
             target="_blank"
             rel="noopener noreferrer"
           >
-           LinkedIn |
+            LinkedIn |
           </a>
           <a
             href="https://github.com/mariamendozax"
@@ -345,7 +356,7 @@ function ContactFooter() {
             target="_blank"
             rel="noopener noreferrer"
           >
-           GitHub
+            GitHub
           </a>
         </div>
         <p className="footer__copy">© 2026 María Mendoza</p>
@@ -371,10 +382,7 @@ function App() {
       "(prefers-reduced-motion: reduce)",
     ).matches;
 
-    if (
-      prefersReducedMotion ||
-      !("IntersectionObserver" in window)
-    ) {
+    if (prefersReducedMotion || !("IntersectionObserver" in window)) {
       elements.forEach((element) => element.classList.add("is-visible"));
       return undefined;
     }

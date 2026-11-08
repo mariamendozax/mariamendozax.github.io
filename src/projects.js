@@ -2,17 +2,29 @@ import aroundUsImage from "../images/AroundUs.png";
 import expensesImage from "../images/TrackExpenses.png";
 import homelandImage from "../images/Homeland.png";
 import triplePeaksImage from "../images/TriplePeaks.png";
+import mexicoLindoImage from "../images/mexicoLindoImage.png";
 
 const projects = [
   {
-    title: "Around the U.S. | TripleTen (2026)",
-    tags: "JavaScript, OOP, Async/Promises, REST API, DOM Manipulation, Form Validation, HTML, CSS",
+    title: "México Lindo y Qué Rico | TripleTen (2026)",
+    tags: "React, React Router, Third-Party API, Fetch, Bilingual (ES/EN), Responsive Design, Vercel",
     excerpt:
-      "Connected the application to a live external API implementing GET, POST, PATCH and DELETE operations with loading state handling and action confirmation.",
+      "Bilingual ordering app for a family birria business in Isla Mujeres, with cart, delivery/pickup options and WhatsApp ordering.",
     description:
-      "Built an image-sharing web app with full CRUD functionality, resulting in a dynamic interface where users can post, like, and delete cards without page reloads, using JavaScript, DOM manipulation, and Fetch API. Refactored the entire codebase to an object-oriented architecture, resulting in a modular system with responsibility-separated classes (Card, FormValidator, Popup, UserInfo, Section, Api), using ES6 modules and principles of encapsulation and inheritance.",
+      "Designed and built a bilingual (Spanish/English) ordering app for my mom's birria business, featuring a categorized menu with extras, a shopping cart with React Router, opening-hours logic that blocks orders after the daily cutoff, and order submission through WhatsApp. Integrated a third-party weather API using Fetch with preloader and error handling, and deployed the app on Vercel with environment variables for sensitive data.",
+    image: mexicoLindoImage,
+    repoUrl: "https://github.com/mariamendozax/project-isla-frontend",
+    liveUrl: "https://mexicolindo-isla.vercel.app",
+  },
+  {
+    title: "Around the U.S. | TripleTen (2026)",
+    tags: "React, Node.js, Express, MongoDB, JWT Authentication, REST API, Nginx, Google Cloud",
+    excerpt:
+      "Full stack image-sharing app with user registration, login and protected routes, deployed on a Google Cloud VM with HTTPS.",
+    description:
+      "Built and deployed a full stack web app where users can sign up, log in, and post, like and delete cards. Developed a RESTful API with Express and MongoDB (Mongoose schemas and models), implemented JWT-based authentication and authorization middleware, centralized error handling, request validation with celebrate, and request/error logging. Connected the React front end to the API and deployed both on a Google Cloud VM using Nginx, PM2 and HTTPS with Certbot.",
     image: aroundUsImage,
-    repoUrl: "https://mariamendozax.github.io/web_project_around_es/src/",
+    repoUrl: "https://github.com/mariamendozax/web_project_api_full",
   },
   {
     title: "Expense Tracker | TripleTen (2026)",
