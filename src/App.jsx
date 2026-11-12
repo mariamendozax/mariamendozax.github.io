@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import projects from "./projects.js";
-import profileImage from "../images/profile_image.jpeg";
+import profileImage from "../images/profile_image.jpg";
 import logoImage from "../images/varita.png";
 
 function Header() {
