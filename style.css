@@ -17,7 +17,7 @@
   position: fixed;
   inset: 0;
   z-index: -1;
-  background-image: url("./images/background.png");
+  background-image: url("./images/sunrise.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -88,10 +88,19 @@
     opacity 0.3s ease;
 }
 
+.section {
+  min-height: 100svh;
+  padding: 7rem 1.5rem 4rem;
+  display: grid;
+  place-items: center;
+}
+
 .hero {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  background: linear-gradient(rgb(10 10 20 / 0.35), rgb(10 10 20 / 0.55));
+  width: 100%;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -123,14 +132,16 @@
   font-family: "Syne", sans-serif;
   color: #e0c97f;
   letter-spacing: 0.2em;
+  font-size: clamp(1rem, 2vw, 1.4rem);
   margin-bottom: 16px;
   display: inline-block;
   animation: olaDiscreta 4s ease-in-out infinite;
 }
 
 .text {
-  font-family: "Merriweather", serif;
+  font-family: "Outfit", sans-serif;
   color: #e0c97f;
+  font-weight: 300;
   font-size: clamp(1rem, 2vw, 1.4rem);
   max-width: 700px;
   margin-bottom: 40px;
@@ -166,10 +177,16 @@
 }
 
 .about {
-  padding: 100px 0;
+  background:
+    linear-gradient(rgb(10 10 20 / 0.4), rgb(10 10 20 / 0.55)),
+    url("./images/blackhole.jpg") center / cover no-repeat;
+}
+
+.about .container {
   display: grid;
-  grid-template-rows: auto 1fr;
-  gap: 40px;
+  padding-top: 0;
+  margin-top: 0;
+  width: min(1100px, 100%);
 }
 
 .about__header {
@@ -179,7 +196,7 @@
 .about__body {
   display: flex;
   gap: 64px;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .about__image {
@@ -205,7 +222,7 @@
 }
 
 .about__text {
-  font-family: "Merriweather", serif;
+  font-family: "Outfit", sans-serif;
   color: #e0c97f;
   line-height: 1.8;
   margin-bottom: 20px;
@@ -217,6 +234,7 @@
 .container {
   padding: 60px 40px;
   color: #f5f0e6;
+  margin-top: 7px;
 }
 
 .cards__title {
@@ -242,8 +260,10 @@
 }
 
 .card {
-  background-image: url("./images/background.png");
-  border: 1px solid rgba(181, 160, 255, 0.2); /* lavanda tenue */
+  background:
+    linear-gradient(rgb(10 10 20 / 0.4), rgb(10 10 20 / 0.55)),
+    url("./images/spaceX.jpg") center / cover no-repeat;
+  border: 1px solid rgba(181, 160, 255, 0.2);
   border-radius: 12px;
   overflow: hidden;
   cursor: pointer;
@@ -265,7 +285,7 @@
 .card:hover,
 .card:focus-visible {
   transform: translateY(-4px);
-  border-color: #4dd9c0; /* cian al hover */
+  border-color: #4dd9c0;
   box-shadow: 0 8px 24px rgba(77, 217, 192, 0.15);
   outline: none;
 }
@@ -289,7 +309,7 @@
 }
 
 .card__excerpt {
-  font-family: "Merriweather", serif;
+  font-family: "Outfit", sans-serif;
   font-size: 0.9rem;
   color: #e4e4ec;
   line-height: 1.5;
@@ -297,10 +317,14 @@
 }
 
 .card__tags {
-  font-family: "Merriweather", serif;
+  font-family: "Outfit", sans-serif;
   font-size: 0.75rem;
-  color: #e0c97f; /* dorado */
+  color: #e0c97f;
   letter-spacing: 0.02em;
+}
+
+.footer {
+  background: linear-gradient(rgb(10 10 20 / 0.35), rgb(10 10 20 / 0.55));
 }
 
 .footer__title {
@@ -313,7 +337,7 @@
 }
 
 .footer__text {
-  font-family: "Merriweather", serif;
+  font-family: "Outfit", sans-serif;
   color: #f5f0e6;
   margin-bottom: 24px;
 }
@@ -332,7 +356,7 @@
   border-radius: 6px;
   padding: 10px 14px;
   color: #f5f0e6;
-  font-family: "Merriweather", serif;
+  font-family: "Outfit", sans-serif;
   font-size: 0.95rem;
   transition:
     border-color 0.3s ease,
@@ -356,7 +380,7 @@
 .footer__form input:focus,
 .footer__form textarea:focus {
   outline: none;
-  border-color: #4dd9c0; /* cyan al hacer focus */
+  border-color: #4dd9c0;
   box-shadow: 0 0 6px rgba(77, 217, 192, 0.4);
 }
 
@@ -394,7 +418,7 @@
 }
 
 .footer__copy {
-  font-family: "Merriweather", serif;
+  font-family: "Outfit", sans-serif;
   color: #b5a0ff;
   opacity: 0.7;
   font-size: 0.85rem;
@@ -420,14 +444,19 @@
   width: 100%;
   padding: 0;
   border: 0;
-  background-image: url("./images/background.png");
+  background:
+    linear-gradient(rgb(10 10 20 / 0.4), rgb(10 10 20 / 0.55)),
+    url("./images/spaceX.jpg") center / cover no-repeat;
   backdrop-filter: blur(2px);
   cursor: default;
 }
 
 .modal__content {
   position: relative;
-  background-image: url("./images/background.png");
+  background-image: url("./images/spaceX.jpg");
+  background:
+    linear-gradient(rgb(10 10 20 / 0.4), rgb(10 10 20 / 0.55)),
+    url("./images/spaceX.jpg") center / cover no-repeat;
   border: 1px solid rgba(181, 160, 255, 0.25);
   border-radius: 16px;
   padding: 2rem;
@@ -472,14 +501,14 @@
 }
 
 .modal__tags {
-  font-family: "Merriweather", serif;
+  font-family: "Outfit", sans-serif;
   color: #e0c97f;
   font-size: 0.8rem;
   margin-bottom: 1rem;
 }
 
 .modal__description {
-  font-family: "Merriweather", serif;
+  font-family: "Outfit", sans-serif;
   color: #e4e4ec;
   font-size: 0.95rem;
   line-height: 1.6;
@@ -568,10 +597,9 @@
     height: 100svh;
     width: 70%;
     max-width: 280px;
-    background-image: url("./images/background.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    background:
+      linear-gradient(rgb(10 10 20 / 0.4), rgb(10 10 20 / 0.55)),
+      url("./images/spaceX.jpg") center / cover no-repeat;
     background-attachment: scroll;
     flex-direction: column;
     justify-content: center;
