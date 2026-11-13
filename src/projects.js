@@ -2,7 +2,7 @@ import aroundUsImage from "../images/AroundUs.png";
 import expensesImage from "../images/TrackExpenses.png";
 import homelandImage from "../images/Homeland.png";
 import triplePeaksImage from "../images/TriplePeaks.png";
-import mexicoLindoImage from "../images/mexicoLindoImage.png";
+import mexicoLindoImage from "../images/mexicoLindoImage.jpg";
 
 const projects = [
   {
