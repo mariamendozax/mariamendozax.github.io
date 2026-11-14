@@ -325,6 +325,7 @@
 
 .footer {
   background: linear-gradient(rgb(10 10 20 / 0.35), rgb(10 10 20 / 0.55));
+  width: 100%;
 }
 
 .footer__title {
