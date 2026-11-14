@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import projects from "./projects.js";
+import projects from "../data/projects.js";
 
 function ProjectCard({ project, onOpen }) {
   return (
@@ -118,7 +118,7 @@ function ProjectModal({ project, onClose }) {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Ver proyecto
+                  Go to repo
                 </a>
               )}
               {project.liveUrl && (
@@ -153,7 +153,7 @@ function ProjectSection({ onOpen }) {
   return (
     <section className="cards__project" id="projects">
       <h2 className="cards__title reveal">
-        Mis <span>proyectos</span>
+        <span>Projects</span>
       </h2>
       <ul className="cards__list">
         {projects.map((project) => (

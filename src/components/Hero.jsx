@@ -8,7 +8,7 @@ function Hero() {
       </h2>
       <div className="modal__btn">
         <a className="btn btn__primary" href="#projects">
-          Ver proyectos
+          Projects
         </a>
       </div>
     </section>

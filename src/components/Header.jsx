@@ -1,5 +1,5 @@
 import { useState } from "react";
-import logoImage from "../images/Sun.svg";
+import logoImage from "../../images/Sun.svg";
 
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
