@@ -1,0 +1,87 @@
+.section {
+  min-height: 100svh;
+  padding: 7rem 1.5rem 4rem;
+  display: grid;
+  place-items: center;
+}
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(rgb(10 10 20 / 0.35), rgb(10 10 20 / 0.55));
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.title {
+  display: inline-block;
+  font-family: "Syne", sans-serif;
+  font-size: clamp(3rem, 8vw, 7rem);
+  margin-bottom: 16px;
+  background: radial-gradient(circle, #b5a0ff 0%, #4dd9c0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: olaDiscreta 4s ease-in-out infinite;
+}
+
+@keyframes olaDiscreta {
+  0%,
+  100% {
+    transform: scale(1) translateY(0);
+  }
+  50% {
+    transform: scale(1.01) translateY(-3px);
+  }
+}
+
+.ocuppacion {
+  font-family: "Syne", sans-serif;
+  color: #e0c97f;
+  letter-spacing: 0.2em;
+  font-size: clamp(1rem, 2vw, 1.4rem);
+  margin-bottom: 16px;
+  display: inline-block;
+  animation: olaDiscreta 4s ease-in-out infinite;
+}
+
+.text {
+  font-family: "Outfit", sans-serif;
+  color: #e0c97f;
+  font-weight: 300;
+  font-size: clamp(1rem, 2vw, 1.4rem);
+  max-width: 700px;
+  margin-bottom: 40px;
+  display: inline-block;
+  animation: olaDiscreta 4s ease-in-out infinite;
+}
+
+.btn__primary {
+  background: transparent;
+  text-decoration: none;
+  border: 1.5px solid #fcb045;
+  color: #fcb045;
+  font-family: "Syne", sans-serif;
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition:
+    background 0.3s ease,
+    color 0.3s ease;
+  width: 220px;
+  height: 41px;
+}
+
+.btn__primary:hover {
+  background: linear-gradient(
+    90deg,
+    rgba(131, 58, 180, 1) 0%,
+    rgba(253, 29, 29, 1) 50%,
+    rgba(252, 176, 69, 1) 100%
+  );
+  color: #ffe6ba;
+}

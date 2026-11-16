@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useState } from "react";
+import { Route, Routes, useLocation } from "react-router-dom";
 import Header from "./Header.jsx";
 import Hero from "./Hero.jsx";
 import About from "./About.jsx";
@@ -7,6 +8,7 @@ import Contact from "./Contact.jsx";
 
 function App() {
   const [selectedProject, setSelectedProject] = useState(null);
+  const location = useLocation();
 
   const openProject = useCallback((project) => {
     setSelectedProject(project);
@@ -41,17 +43,41 @@ function App() {
 
     elements.forEach((element) => observer.observe(element));
     return () => observer.disconnect();
-  }, []);
+  }, [location.pathname]);
+
+  useEffect(() => {
+    const scrollTarget = location.state?.scrollTarget;
+    if (scrollTarget) {
+      document.getElementById(scrollTarget)?.scrollIntoView();
+    } else {
+      window.scrollTo(0, 0);
+    }
+  }, [location.pathname, location.state]);
 
   return (
     <>
-      <div className="pages">
-        <Header />
-        <Hero />
-        <About />
-        <ProjectSection onOpen={openProject} />
-        <Contact />
-      </div>
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <div className="pages">
+              <Header />
+              <Hero />
+              <About />
+              <Contact />
+            </div>
+          }
+        />
+        <Route
+          path="/projects"
+          element={
+            <div className="pages">
+              <Header />
+              <ProjectSection onOpen={openProject} />
+            </div>
+          }
+        />
+      </Routes>
       <ProjectModal project={selectedProject} onClose={closeProject} />
     </>
   );
