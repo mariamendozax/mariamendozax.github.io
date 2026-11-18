@@ -24,7 +24,7 @@
 .card {
   background:
     linear-gradient(rgb(10 10 20 / 0.4), rgb(10 10 20 / 0.55)),
-    url("../images/spaceX.jpg") center / cover no-repeat;
+    url("../../images/spaceX.jpg") center / cover no-repeat;
   border: 1px solid rgba(181, 160, 255, 0.2);
   border-radius: 12px;
   overflow: hidden;
@@ -106,17 +106,16 @@
   border: 0;
   background:
     linear-gradient(rgb(10 10 20 / 0.4), rgb(10 10 20 / 0.55)),
-    url("../images/spaceX.jpg") center / cover no-repeat;
+    url("../../images/spaceX.jpg") center / cover no-repeat;
   backdrop-filter: blur(2px);
   cursor: default;
 }
 
 .modal__content {
   position: relative;
-  background-image: url("../images/spaceX.jpg");
   background:
     linear-gradient(rgb(10 10 20 / 0.4), rgb(10 10 20 / 0.55)),
-    url("../images/spaceX.jpg") center / cover no-repeat;
+    url("../../images/spaceX.jpg") center / cover no-repeat;
   border: 1px solid rgba(181, 160, 255, 0.25);
   border-radius: 16px;
   padding: 2rem;
