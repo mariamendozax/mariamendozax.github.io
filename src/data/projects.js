@@ -6,7 +6,7 @@ import mexicoLindoImage from "../../images/mexicoLindoImage.jpg";
 
 const projects = [
   {
-    title: "México Lindo Isla Mujeres | TripleTen (2026)",
+    title: "México Lindo Isla Mujeres | Mexico Lindo y que Rico (2026)",
     tags: "React, React Router, Third-Party API, Fetch, Bilingual (ES/EN), Responsive Design, Vercel",
     excerpt:
       "Bilingual ordering app for a family birria business in Isla Mujeres, with cart, delivery/pickup options and WhatsApp ordering.",
