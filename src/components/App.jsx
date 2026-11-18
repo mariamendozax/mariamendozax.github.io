@@ -48,11 +48,13 @@ function App() {
   useEffect(() => {
     const scrollTarget = location.state?.scrollTarget;
     if (scrollTarget) {
-      document.getElementById(scrollTarget)?.scrollIntoView();
+      document
+        .getElementById(scrollTarget)
+        ?.scrollIntoView({ behavior: "smooth" });
     } else {
-      window.scrollTo(0, 0);
+      window.scrollTo({ top: 0, behavior: "smooth" });
     }
-  }, [location.pathname, location.state]);
+  }, [location.key]);
 
   return (
     <>

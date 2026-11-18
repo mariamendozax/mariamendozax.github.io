@@ -34,43 +34,38 @@ function Header() {
           className={`nav__links${menuOpen ? " is-open" : ""}`}
           id="site-navigation"
         >
-          {pathname === "/projects" ? (
+          <ul
+            className={`nav__links${menuOpen ? " is-open" : ""}`}
+            id="site-navigation"
+          >
             <li>
-              <Link className="nav__link" to="/" onClick={closeMenu}>
-                Home
-              </Link>
-            </li>
-          ) : (
-            <>
-              <li>
               <a
                 className="nav__link"
                 href="#about"
                 onClick={(event) => goToSection(event, "about")}
               >
-                  About me
-                </a>
-              </li>
-              <li>
+                About me
+              </a>
+            </li>
+            <li>
               <a
                 className="nav__link"
                 href="#contact"
                 onClick={(event) => goToSection(event, "contact")}
               >
-                  Contact
-                </a>
-              </li>
-              <li>
-                <Link
-                  className="nav__link"
-                  to="/projects"
-                  onClick={closeMenu}
-                >
-                  Projects
-                </Link>
-              </li>
-            </>
-          )}
+                Contact
+              </a>
+            </li>
+            <li>
+              <Link
+                className={`nav__link${pathname === "/projects" ? " is-active" : ""}`}
+                to="/projects"
+                onClick={closeMenu}
+              >
+                Projects
+              </Link>
+            </li>
+          </ul>
         </ul>
         <button
           className="nav__toggle"

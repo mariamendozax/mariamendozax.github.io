@@ -1,6 +1,6 @@
 .about {
   background:
-    linear-gradient(rgb(10 10 20 / 0.4), rgb(10 10 20 / 0.55)),
+    linear-gradient(rgba(10, 10, 20, 0.4), rgba(10, 10, 20, 0.55)),
     url("./images/blackhole.jpg") center / cover no-repeat;
   width: 100%;
 }
